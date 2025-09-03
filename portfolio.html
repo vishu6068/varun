@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varun - Web Developer Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), 
+                  url('myimage.jpeg') center/cover no-repeat;
+    }
+
+    .skill-card {
+      transition: all 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid #667eea;
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #667eea }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Fade-in animation on scroll */
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-in-out;
+    }
+    .skill-card, .project-card {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    /* Universal logo styling */
+.skill-card img {
+  width: 48px;        /* fixed width */
+  height: 48px;       /* fixed height */
+  object-fit: contain; /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto;     /* centers image */
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.1); /* subtle zoom on hover */
+}
+
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-800">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold gradient-text">Varun</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
+        <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+        <a href="Varun's Resume_.pdf" class="hover:text-purple-400 transition-colors">Download CV</a>
+      </div>
+      <div class="md:hidden">
+        <button class="text-white">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 text-center">
+      <div class="floating mb-8">
+        <div class="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1">
+          <img src="WhatsApp Image 2025-09-02 at 21.41.24_c9c583a7.jpg" alt="Varun - Professional Web Developer Portrait" class="w-full h-full rounded-full object-cover border-4 border-gray-900">
+        </div>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">
+        Hi, I'm <span class="gradient-text">Varun</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 typewriter">
+        Full Stack Web Developer & UI/UX Enthusiast
+      </p>
+      <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+        I create beautiful, functional, and responsive web applications using modern technologies. 
+        Passionate about clean code and user experience.
+      </p>
+      <div class="flex justify-center space-x-6">
+        <a href="#projects" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+          View My Work
+        </a>
+        <a href="#contact" class="border-2 border-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-600 transition-all">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+ <!-- Skills Section -->
+<section id="skills" class="py-20 bg-gray-800">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-4">Technical Skills</h2>
+    <p class="text-gray-400 text-xl mb-16">Technologies I work with</p>
+    <p>✅HTML</p>
+    <p>✅CSS</p>
+    <p>✅JavaScript</p>
+    <p>✅MySQL</p>
+    <p>✅PHP</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      
+     <!-- HTML5 -->
+<div class="skill-card bg-gray-700 p-6 rounded-xl text-center group">
+  <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-xl p-3 group-hover:bg-orange-500 transition-colors">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo">
+  </div>
+  <h3 class="font-semibold text-lg mb-2">HTML5</h3>
+  <p class="text-gray-400 text-sm">Semantic Markup</p>
+</div>
+
+<!-- CSS3 -->
+<div class="skill-card bg-gray-700 p-6 rounded-xl text-center group">
+  <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-xl p-3 group-hover:bg-blue-500 transition-colors">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo">
+  </div>
+  <h3 class="font-semibold text-lg mb-2">CSS3</h3>
+  <p class="text-gray-400 text-sm">Responsive Design</p>
+</div>
+
+<!-- JavaScript -->
+<div class="skill-card bg-gray-700 p-6 rounded-xl text-center group">
+  <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-xl p-3 group-hover:bg-yellow-400 transition-colors">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo">
+  </div>
+  <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
+  <p class="text-gray-400 text-sm">Dynamic Functionality</p>
+</div>
+
+<!-- MySQL -->
+<div class="skill-card bg-gray-700 p-6 rounded-xl text-center group">
+  <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-xl p-3 group-hover:bg-blue-400 transition-colors">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo">
+  </div>
+  <h3 class="font-semibold text-lg mb-2">MySQL</h3>
+  <p class="text-gray-400 text-sm">Database Management</p>
+</div>
+
+<!-- PHP -->
+<div class="skill-card bg-gray-700 p-6 rounded-xl text-center group">
+  <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-xl p-3 group-hover:bg-indigo-400 transition-colors">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo">
+  </div>
+  <h3 class="font-semibold text-lg mb-2">PHP</h3>
+  <p class="text-gray-400 text-sm">Server-side Scripting</p>
+</div>
+
+<!-- MS Office -->
+<div class="skill-card bg-gray-700 p-6 rounded-xl text-center group">
+  <div class="w-16 h-16 mx-auto mb-4 bg-white rounded-xl p-3 group-hover:bg-green-500 transition-colors">
+    <img src="https://img.icons8.com/color/96/microsoft-office-2019.png" alt="MS Office Logo">
+  </div>
+  <h3 class="font-semibold text-lg mb-2">MS Office</h3>
+  <p class="text-gray-400 text-sm">Word, Excel, PowerPoint</p>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Featured Projects</h2>
+      <p class="text-gray-400 text-xl mb-16">Some of my recent work</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card bg-gray-800 rounded-xl overflow-hidden hover:shadow-2xl">
+          <div class="h-48 bg-gradient-to-r from-purple-600 to-pink-600">
+            <img src="varun.gif" alt="E-commerce React Application" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+            <p class="text-gray-400 mb-4">React, Node.js, MongoDB full-stack e-commerce solution</p>
+            <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold">View Project →</a>
+          </div>
+        </div>
+        <!-- ✅ Add more project cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+      <p class="text-gray-400 text-xl mb-12">Let's work together!</p>
+
+      <div class="max-w-2xl mx-auto bg-gray-700 rounded-2xl p-8">
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-purple-500">
+            <input type="email" placeholder="your@email.com" class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-purple-500">
+          </div>
+          <input type="text" placeholder="Subject" class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-purple-500">
+          <textarea rows="5" placeholder="Tell me about your project..." class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-purple-500"></textarea>
+          <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex justify-center space-x-8 mt-12">
+        <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-purple-600"><i class="fab fa-github text-xl"></i></a>
+        <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600"><i class="fab fa-linkedin text-xl"></i></a>
+        <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+        <a href="https://www.instagram.com/itz_varun_moujpuriya/" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-500"><i class="fab fa-instagram text-xl"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8 border-t border-gray-800 text-center">
+    <p class="text-gray-400">© 2025 Varun. All rights reserved.</p>
+    <p class="text-gray-500 text-sm mt-2">Built with ❤ using HTML, Tailwind CSS & JavaScript</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.skill-card, .project-card').forEach(el => observer.observe(el));
+
+    // Typewriter reset
+    function resetTypewriter() {
+      const tw = document.querySelector('.typewriter');
+      tw.style.animation = 'none';
+      setTimeout(() => { tw.style.animation = ''; }, 10);
+    }
+    setInterval(resetTypewriter, 3500);
+  </script>
+</body>
+</html>
